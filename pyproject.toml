@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pvz"
+version = "4.0.3"
+authors = [
+    { name = "lmintlcx", email = "lmintlcx@gmail.com" },
+]
+description = "Python vs. Zombies"
+license = { file = "LICENSE", content-type = "text/plain" }
+
+[tool.setuptools.dynamic]
+version = { attr = "pvz.__version__" }
+readme = { file = ["README.md"], content-type = "text/markdown" }
+dependencies = { file = ["requirements.txt"] }
+
+[tool.setuptools.packages.find]
+include = ["pvz"]
+exclude = []
