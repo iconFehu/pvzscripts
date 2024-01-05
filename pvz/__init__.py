@@ -164,5 +164,5 @@ def _on_exit():
         CloseHandle(pvz_handle)
 
 
-_on_start()
+# _on_start()
 atexit.register(_on_exit)
